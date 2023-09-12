@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import Task from "@/core/task/Task";
-=======
-import Task from "@/core/models/Task";
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
 import Button from "@/components/template/Button";
 import {useEffect, useState} from "react";
 import useAuth from "@/hooks/UseAuth";
@@ -10,24 +6,15 @@ import Layout from "@/components/template/Layout";
 import Table from "@/components/template/Table";
 import Form from "@/components/template/Form";
 import SideBar from "@/components/template/SideBar";
-<<<<<<< HEAD
 import {core} from "@/facade";
 import TaskDto from "@/core/task/TaskDto";
-=======
-import {core} from "../facade";
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
 
 export default function Home() {
 
     const {user, logout} = useAuth()
 
-<<<<<<< HEAD
     function selectedTask(taskDto: TaskDto) {
         setTaskDto(taskDto)
-=======
-    function selectedTask(task: Task) {
-        setTask(task)
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
         setVisible('form')
     }
 
@@ -38,11 +25,7 @@ export default function Home() {
     }
 
     function newTask() {
-<<<<<<< HEAD
         setTaskDto(new TaskDto('', ''))
-=======
-        setTask(new Task('', ''))
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
         setVisible('form')
     }
 
@@ -63,11 +46,7 @@ export default function Home() {
         getAllTasks()
     }, [user])
 
-<<<<<<< HEAD
     const [taskDto, setTaskDto] = useState<TaskDto>(new TaskDto('', ''))
-=======
-    const [task, setTask] = useState<Task>(new Task('', ''))
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
     const [tasks, setTasks] = useState<Task[]>([])
     const [visible, setVisible] = useState<'table' | 'form'>('table')
 
@@ -93,11 +72,7 @@ export default function Home() {
                         </>
                     ) : (
                         <Form
-<<<<<<< HEAD
                             taskDto={taskDto}
-=======
-                            Task={task}
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
                             cancelled={() => setVisible('table')}
                             taskChanged={saveTask}
                         />
