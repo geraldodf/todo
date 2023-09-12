@@ -1,26 +1,29 @@
 import Input from "@/components/template/Input";
 import {useState} from "react";
-import Task from "@/core/models/Task";
+import Task from "@/core/task/Task";
 import Button from "@/components/template/Button";
+import TaskDto from "@/core/task/TaskDto";
+import Title from "@/core/shared/Title";
+import Description from "@/core/shared/Description";
 
 interface FormProps {
-    Task: Task
+    taskDto: TaskDto
     cancelled?: () => void
     taskChanged?: (task: Task) => void
 
 }
 
 export default function Form(props: FormProps) {
-    const id = props.Task?.id
-    const [title, setTitle] = useState(props.Task?.title ?? '')
-    const [description, setDescription] = useState(props.Task?.description ?? '')
+    const id = props.taskDto?.id
+    const [title, setTitle] = useState(props.taskDto?.title ?? '')
+    const [description, setDescription] = useState(props.taskDto?.description ?? '')
     return (
         <div>
             <Input text={"Title"} value={title} onChange={setTitle} className={`mb-4`}></Input>
             <Input text={"Description"} value={description} onChange={setDescription} className={`mb-4`}></Input>
             <div className={`flex justify-end mt-6`}>
                 <Button onClick={() => {
-                    const task = new Task(title, description)
+                    const task = new Task(new Title(title), new Description(description))
                     task.id = id
                     props.taskChanged?.(task)
                 }}

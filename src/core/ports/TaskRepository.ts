@@ -1,4 +1,4 @@
-import Task from "@/core/models/Task";
+import Task from "@/core/task/Task";
 
 export default interface TaskRepository {
     save(task: Task, emailId: string): Promise<Task>

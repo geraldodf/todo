@@ -1,4 +1,4 @@
-import Task from "@/core/models/Task";
+import Task from "@/core/task/Task";
 import Button from "@/components/template/Button";
 import {useEffect, useState} from "react";
 import useAuth from "@/hooks/UseAuth";
@@ -6,14 +6,15 @@ import Layout from "@/components/template/Layout";
 import Table from "@/components/template/Table";
 import Form from "@/components/template/Form";
 import SideBar from "@/components/template/SideBar";
-import {core} from "../facade";
+import {core} from "@/facade";
+import TaskDto from "@/core/task/TaskDto";
 
 export default function Home() {
 
     const {user, logout} = useAuth()
 
-    function selectedTask(task: Task) {
-        setTask(task)
+    function selectedTask(taskDto: TaskDto) {
+        setTaskDto(taskDto)
         setVisible('form')
     }
 
@@ -24,7 +25,7 @@ export default function Home() {
     }
 
     function newTask() {
-        setTask(new Task('', ''))
+        setTaskDto(new TaskDto('', ''))
         setVisible('form')
     }
 
@@ -45,7 +46,7 @@ export default function Home() {
         getAllTasks()
     }, [user])
 
-    const [task, setTask] = useState<Task>(new Task('', ''))
+    const [taskDto, setTaskDto] = useState<TaskDto>(new TaskDto('', ''))
     const [tasks, setTasks] = useState<Task[]>([])
     const [visible, setVisible] = useState<'table' | 'form'>('table')
 
@@ -71,7 +72,7 @@ export default function Home() {
                         </>
                     ) : (
                         <Form
-                            Task={task}
+                            taskDto={taskDto}
                             cancelled={() => setVisible('table')}
                             taskChanged={saveTask}
                         />

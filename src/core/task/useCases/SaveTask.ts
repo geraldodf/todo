@@ -1,11 +1,11 @@
 import TaskRepository from "@/core/ports/TaskRepository";
-import Task from "../../Task";
+import Task from "@/core/task/Task";
 
-export class DeleteTask {
+export class SaveTask {
     constructor(private taskRepo: TaskRepository) {
     }
 
     async execute(task: Task, emailId: string) {
-        return this.taskRepo.delete(task, emailId);
+        return this.taskRepo.save(task, emailId)
     }
 }

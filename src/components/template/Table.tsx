@@ -1,10 +1,12 @@
-import Task from "@/core/models/Task"
+import Task from "@/core/task/Task"
 import {useEffect, useState} from "react";
 import {EditIcon, TrashIcon} from "./Icons";
+import TaskDto from "@/core/task/TaskDto";
+import Title from "@/core/shared/Title";
 
 interface TableProps {
     tasks: Task[]
-    selectedTask?: (task: Task) => void
+    selectedTask?: (taskDto: TaskDto) => void
     deletedTask?: (task: Task) => void
     saveTask?: (task: Task) => void
 }
@@ -37,8 +39,8 @@ export default function Table(props: TableProps) {
                 <div key={i} className={`xl:w-1/3 md:w-1/2 p-4`}>
                     <div className={`border rounded-lg ${task.completed ? 'bg-zinc-200 line-through' : ''}`}>
                         <div className="p-6">
-                            <h2 className={`text-lg text-gray-900 font-medium title-font mb-2`}>{task.title}</h2>
-                            <p className="leading-relaxed text-base">{task.description}</p>
+                            <h2 className={`text-lg text-gray-900 font-medium title-font mb-2`}>{task.title.value}</h2>
+                            <p className="leading-relaxed text-base">{task.description.value}</p>
                         </div>
                         <div className="flex flex-row items-center justify-center">
                             {displayActions ? renderActions(task) : false}
@@ -60,7 +62,7 @@ export default function Table(props: TableProps) {
             <span className={`flex justify-center`}>
                 {props.selectedTask ? (
                     <button onClick={() => {
-                        props.selectedTask?.(task)
+                        props.selectedTask?.(Task.toDto(task))
                     }} className={`text-green-600 rounded-full hover:bg-zinc-50 p-1 m-1`}>
                         {EditIcon}
                     </button>

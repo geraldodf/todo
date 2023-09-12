@@ -2,7 +2,6 @@ interface ButtonProps {
     className?: string
     children: any
     onClick?: () => void
-
 }
 
 export default function Button(props: ButtonProps) {

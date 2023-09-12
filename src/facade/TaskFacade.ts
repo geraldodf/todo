@@ -1,10 +1,6 @@
-import Task from "../core/models/Task";
-import {
-    DeleteTask,
-    GetAllTasks,
-    SaveTask,
-} from "../core/models/useCase/task";
+import Task from "@/core/task/Task";
 import TaskRepository from "../core/ports/TaskRepository";
+import {DeleteTask, GetAllTasks, SaveTask} from "@/core/task/useCases";
 
 export class TaskFacade {
     constructor(private taskRepo: TaskRepository) {

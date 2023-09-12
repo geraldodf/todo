@@ -1,4 +1,4 @@
-import User from "@/core/models/User"
+import User from "@/core/user/User"
 import {createContext, useState} from "react"
 import route from 'next/router'
 import Cookies from 'js-cookie'

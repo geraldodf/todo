@@ -1,4 +1,4 @@
-import User from "../models/User";
+import User from "@/core/user/User";
 
 export type ObserveUser = (user: User) => void;
 export type CancelObservation = () => void;

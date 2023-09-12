@@ -1,6 +1,6 @@
-import {EmailAndPasswordLogin, GoogleLogin, Logout, SignUpWithEmailAndPassword,} from "../core/models/useCase/user";
-import {Observe} from "@/core/models/useCase/user/Observe";
-import {AuthRepository} from "../core/ports/AuthRepository";
+import {AuthRepository} from "@/core/ports/AuthRepository";
+import {EmailAndPasswordLogin, GoogleLogin, Logout, SignUpWithEmailAndPassword} from "@/core/user/useCases";
+import {Observe} from "@/core/user/useCases/Observe";
 
 export class AuthFacade {
     constructor(private repoAuth: AuthRepository) {
