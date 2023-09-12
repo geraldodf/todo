@@ -2,5 +2,9 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+<<<<<<< HEAD
+=======
+    <inspection_tool class="TypeScriptValidateTypes" enabled="false" level="ERROR" enabled_by_default="false" />
+>>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
   </profile>
 </component>

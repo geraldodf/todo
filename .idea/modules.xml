@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/todo.iml" filepath="$PROJECT_DIR$/.idea/todo.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/employee-control.iml" filepath="$PROJECT_DIR$/.idea/employee-control.iml" />
+>>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
     </modules>
   </component>
 </project>
