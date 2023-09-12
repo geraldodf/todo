@@ -4,11 +4,7 @@ import {
     ObserveUser,
 } from "@/core/ports/AuthRepository";
 import firebase from "@/backend/firebase/config";
-<<<<<<< HEAD
 import User from "@/core/user/User";
-=======
-import User from "@/core/models/User";
->>>>>>> b6fa5ce1c88d8c24ffa96f29a3fa0b5c38d2d036
 
 export default class FirebaseAuth implements AuthRepository {
     private async normalizedUser(
