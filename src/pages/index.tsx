@@ -65,7 +65,7 @@ export default function Home() {
                             <div className={`flex justify-end`}>
                                 <Button
                                     onClick={newTask}
-                                    className={'mb-4 bg-gradient-to-br content-center from-blue-500 to-blue-400'}>
+                                    className={'mb-4 mt-3 bg-gradient-to-br content-center from-blue-500 to-blue-400'}>
                                     New Task
                                 </Button>
                             </div>

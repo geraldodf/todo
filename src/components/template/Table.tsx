@@ -36,10 +36,11 @@ export default function Table(props: TableProps) {
     function renderData() {
         return tasks?.map((task, i) => {
             return (
-                <div key={i} className={`xl:w-1/3 md:w-1/2 p-4`}>
-                    <div className={`border rounded-lg ${task.completed ? 'bg-zinc-200 line-through' : ''}`}>
-                        <div className="p-6">
-                            <h2 className={`text-lg text-gray-900 font-medium title-font mb-2`}>{task.title.value}</h2>
+                <div key={i} className={`xl:w-1/3 md:w-1/2 p-4 text-white`}>
+                    <div
+                        className={`border border-zinc-800 shadow-md bg-gradient-to-r from-zinc-700 to-zinc-600 rounded-lg  ${task.completed ? 'from-zinc-950  to-zinc-900 rounded-lg line-through' : ''}`}>
+                        <div className="p-6 ">
+                            <h2 className={`text-lg  font-medium title-font mb-2`}>{task.title.value}</h2>
                             <p className="leading-relaxed text-base">{task.description.value}</p>
                         </div>
                         <div className="flex flex-row items-center justify-center">
@@ -80,12 +81,12 @@ export default function Table(props: TableProps) {
     }
 
     return (
-        <section className="text-gray-600">
+        <section className={`text-gray-600`}>
             <div className="container px-5 py-16 mx-auto">
                 <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center ">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Organize your daily
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-200">Organize your daily
                         tasks</h1>
-                    <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">This is a great way for you to organize
+                    <p className="lg:w-1/2 w-full leading-relaxed text-gray-400">This is a great way for you to organize
                         your daily tasks and stay organized with tasks completed and not completed during your everyday
                         life.</p>
                 </div>

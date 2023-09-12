@@ -9,7 +9,7 @@ interface LayoutProps {
 export default function Layout(props: LayoutProps) {
     return (
         <ForceAuthentication>
-            <div className={`flex flex-col w-2/3 ml-20 bg-white text-gray-800 rounded-md text-center`}>
+            <div className={`flex flex-col w-2/3 ml-20 bg-zinc-900 rounded-md text-center`}>
                 <Title>{props.Title}</Title>
                 <div className={`p-6`}>
                     {props.children}
