@@ -45,7 +45,6 @@ export default class TaskCollection implements TaskRepository {
             await this.collection(emailId).doc(task.id).set(task);
             return task;
         } else {
-            debugger;
             const docRef = await this.collection(emailId).add(task);
             const doc = await docRef.get();
             return {...doc.data(), id: docRef.id, ...task};
