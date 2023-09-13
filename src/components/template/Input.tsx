@@ -16,7 +16,7 @@ export default function Input(props: InputProps) {
                    type={props.type ?? 'text'}
                    value={props.value}
                    readOnly={props.readOnly}
-                   className={`border border-blue-500 rounded-lg 
+                   className={`border border-blue-500 rounded-lg text-zinc-700
                    focus:outline-none bg-gray-50 px-4 py-2 ${props.readOnly ? '' : 'focus:bg-white'}`}/>
         </div>
     )
