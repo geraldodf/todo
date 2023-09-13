@@ -16,20 +16,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
+<<<<<<< HEAD
 This project is an example of a web application using Next.js, TypeScript, and Firebase, focused on demonstrating design patterns and architectures, such as Hexagonal Architecture, Use Cases, Value Objects, and Facade. The main goal is to illustrate the practical application of these patterns and Clean Code and Clean Architecture concepts in a web development context.
+=======
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-Important Note: This project is not intended to be a beautiful or extremely complex application, nor does it address complex business rules. Instead, it focuses on architecture and a simple and effective way to apply it. The main functionality of the application is Todo task management.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Hexagonal Architecture
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+>>>>>>> parent of 4f92e81 (Update README.md)
 
-Hexagonal Architecture, also known as Ports and Adapters Architecture, is a software design approach that separates the concerns of the application core from external dependencies. In this project, Hexagonal Architecture is applied to ensure that the application core (use cases) is isolated from external layers, such as the user interface and Firebase data access. In the case of this project, the "core" package is completely decoupled from any external library or framework, being the heart of my application.
+## Learn More
 
-Clean Code and Clean Architecture
+To learn more about Next.js, take a look at the following resources:
 
-This project follows the principles of Clean Code and Clean Architecture, seeking to keep the code clean, readable, and maintainable. The concepts of separation of concerns, dependency inversion, and use of value objects are applied to create more robust and sustainable code.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-This project serves as a simple, but practical, example of how to apply Hexagonal Architecture, Clean Code, and Clean Architecture in a web application using Next.js, TypeScript, and Firebase. It is important to note that, in more complex projects, these patterns and concepts can be expanded and adjusted to meet the specific needs of the project.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Remember that the main goal of this project is to demonstrate the architectures and design patterns, and not to provide a complete and production-ready application.
+## Deploy on Vercel
 
-I appreciate your interest in this project and hope it is helpful in illustrating the application of these concepts in your own projects.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
